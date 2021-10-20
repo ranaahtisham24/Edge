@@ -113,3 +113,32 @@ var x1 = window.matchMedia("(min-width: 992px)")
 myFunction(x) // Call listener function at run time
 scrollFunction(x1) // Call listener function at run time
 x.addListener(myFunction) // Attach listener function on state changes
+
+
+
+
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'vertical',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+
+
+
+

@@ -5,15 +5,15 @@ const Footer = () => {
         <footer>
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-lg-8 col-xl-7">
+                <div class="col-md-4 col-lg-6 col-xl-7">
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-github cover"></i></a>
+                        <a href="#" className="me-1"><i class="fab fa-twitter"></i></a>
+                        <a href="#"  className="me-1"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"  className="me-1"><i class="fab fa-instagram"></i></a>
+                        <a href="#"  className="me-1"><i class="fab fa-github cover"></i></a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 col-xl-5">
+                <div class="col-md-8 col-lg-6 col-xl-5">
                     <h4>Sign up for our newsletter!</h4>
                     <form action="">
                         <div class="newsletter-wrapper">
