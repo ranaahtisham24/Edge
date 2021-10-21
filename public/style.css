@@ -68,12 +68,12 @@ header .custom-nav {
     width: 100%;
     z-index: 1000;
 }
-
 header .custom-nav ul li a.active-nav-link {
     color: #001a0a;
 }
-
-
+header .navbar-toggler-icon i{
+    font-size: 30px;
+}
 /* bars */
 
 .bar1,
@@ -1224,7 +1224,6 @@ section.team {
         padding: 10px;
     }
     header .custom-nav ul {
-        background-color: #0b7f42;
         padding: 0px 10px;
     }
     .hero .header-lines {

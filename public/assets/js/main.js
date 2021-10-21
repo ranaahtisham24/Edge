@@ -1,49 +1,10 @@
-// jQuery(document).ready(function ($) {
-
-//   $('.owl-one').owlCarousel({
-//     loop: true,
-//     margin: 10,
-//     nav: true,
-//     responsive: {
-//       0: {
-//         items: 1
-//       },
-//       600: {
-//         items: 1
-//       },
-//       1000: {
-//         items: 2
-//       }
-//     }
-//   })
-//   $('.owl-two').owlCarousel({
-//     loop: true,
-//     margin: 10,
-//     nav: true,
-//     responsive: {
-//       0: {
-//         items: 1
-//       },
-//       600: {
-//         items: 1
-//       },
-//       1000: {
-//         items: 1
-//       }
-//     }
-//   })
-
-//   $(".owl-prev").html('<i class="fa fa-chevron-left"></i>');
-//   $(".owl-next").html('<i class="fa fa-chevron-right"></i>');
-// })
-
-
-var x1 = window.matchMedia("(min-width: 992px)")
 // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
-window.onscroll = function () { scrollFunction(x1) };
+var x = window.matchMedia("(max-width: 991.98px)")
+var x1 = window.matchMedia("(min-width: 992px)")
+window.onscroll = function () { scrollFunction(x)};
 
 function scrollFunction(x) {
-  if (x.matches) {
+  if (!x.matches) {
     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
       document.getElementById("navbar").style.background = "white";
       document.getElementById("navbar").style.boxShadow = "0 0 10px 0 rgb(88 89 92 / 25%)";
@@ -78,17 +39,7 @@ function scrollFunction(x) {
         activelink[i].style.color = '#000'
       }
     }
-  }
-}
-
-// hamburger toggle
-function hamburgerfunction(x) {
-  x.classList.toggle("change");
-}
-
-function myFunction(x) {
-  if (x.matches) { // If media query matches
-
+  }else{
     document.getElementById("navbar").style.background = "white";
     document.getElementById('sitelogo').style.fill = "#0B7F42";
     let activelink = document.getElementsByClassName("active-nav-link")
@@ -104,40 +55,17 @@ function myFunction(x) {
       activelink[i].style.color = '#0B7F42'
     }
   }
-  else {
-
-  }
 }
-var x = window.matchMedia("(max-width: 991.98px)")
-var x1 = window.matchMedia("(min-width: 992px)")
-myFunction(x) // Call listener function at run time
-scrollFunction(x1) // Call listener function at run time
-x.addListener(myFunction) // Attach listener function on state changes
+
+// hamburger toggle
+function hamburgerfunction(x) {
+  x.classList.toggle("change");
+}
 
 
 
 
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'vertical',
-  loop: true,
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-});
 
 
 
